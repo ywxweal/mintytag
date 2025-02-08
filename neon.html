@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" data-darkreader-proxy-injected="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="Neon Tag | by tictac" property="og:title">
+  <meta content="tictac is so, sigma ong." property="og:description">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minty Tag</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="background.css">
+  <link href="css2" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+
+    /* Animation */
+    @keyframes fadeInUpSlow 
+    {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes scrollBackground 
+    {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-66.66%);
+      }
+    }
+
+    /* Hero Animations */
+    .hero h1, .hero h2, .hero p, .hero p2, .hero button {
+      opacity: 0;
+    }
+    /* Hero (top of the page) */
+    .hero {
+      text-align: center;
+      position: relative;
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 0 0 20px #cc00ff;
+      top: -250px;
+    }
+    .hero .version {
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 0 0 20px #cc00ff;
+      position: absolute;
+      top: 0;
+      right: -3rem;
+    }
+    .hero h1 {
+      font-size: 8rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px #cc00ff;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero h2 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px #cc00ff;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+    .hero p {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px #cc00ff;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+    .hero p2 {
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 0 0 20px #cc00ff;
+      text-align: center;
+      position: relative;
+      top: -5px;
+      margin-bottom: 2rem;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+    .hero button {
+      margin: 0 10px;
+      color: #ffffff;
+      box-shadow: 0 0 20px #cc00ff;
+      background-color: #cc00ff;
+      padding: 10px 40px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      font-size: 2rem;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    .hero a {
+      color: #cc00ff;
+    }
+    .hero button:hover {
+      opacity: 0.5;
+    }
+    .hero a:hover {
+      text-decoration: none;
+    }
+
+    /* Hero 2 */
+    .hero2 h1 {
+      position: relative;
+      font-size: 4.5rem;
+      margin-bottom: 14rem;
+      text-shadow: 0 0 10px #ffffff;
+      left: 330px;
+      top: 400px;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero2 p {
+      position: relative;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #ffffff;
+      left: 330px;
+      top: 180px;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero2-container {
+      position: relative;
+      text-align: center;
+    }
+
+    /* Hero 3 */
+    .hero3 h1 {
+      font-size: 4.5rem;
+      margin-bottom: 10rem;
+      text-shadow: 0 0 10px #ffffff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      position: relative;
+      top: 50px;
+    }
+    .hero3 h2 {
+      font-size: 2.5rem;
+      margin-bottom: 14rem;
+      text-shadow: 0 0 10px #ffffff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      position: relative;
+    }
+    .hero3 p {
+      position: absolute;
+      top: 130%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero3_visual_container {
+      position: relative;
+      text-align: left;
+      padding: 20px;
+      width: 600px;
+      height: 300px;
+      margin: 20px auto;
+      border-radius: 10px;
+      right: 400px;
+      bottom: 50px;
+    }
+    .hero3_visual_container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 14rem;
+      text-shadow: 0 0 10px #ffffff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero3_visual_container p {
+      position: relative;
+      font-size: 1.10rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero3_visual_container ul {
+      position: relative;
+      list-style-type: none;
+      font-size: 1.10rem;
+      padding-left: 0;
+      line-height: 1.625;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero3_visual_container ul li {
+      background: url("images/styled-ul-check.svg") no-repeat left center;
+      padding-left: 46px;
+      margin-bottom: 10px;
+    }
+
+    /* Hero 4 */
+    .hero4_visual_container {
+      position: relative;
+      text-align: left;
+      padding: 20px;
+      width: 600px;
+      height: 300px;
+      margin: 20px auto;
+      border-radius: 10px;
+      left: 400px;
+      bottom: 130px;
+    }
+    .hero4_visual_container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 14rem;
+      text-shadow: 0 0 10px #ffffff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero4_visual_container p {
+      position: relative;
+      font-size: 1.10rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero4_visual_container ul {
+      position: relative;
+      list-style-type: none;
+      font-size: 1.10rem;
+      padding-left: 0;
+      margin-bottom: 13px;
+      line-height: 1.625;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero4_visual_container ul li {
+      background: url("images/styled-ul-check.svg") no-repeat left center;
+      padding-left: 46px;
+      margin-bottom: 10px;
+    }
+
+    /* Hero 5 */
+    .hero5_visual_container {
+      position: relative;
+      text-align: left;
+      padding: 20px;
+      width: 600px;
+      height: 300px;
+      margin: 20px auto;
+      border-radius: 10px;
+      right: 400px;
+      bottom: 50px;
+    }
+    .hero5_visual_container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 14rem;
+      text-shadow: 0 0 10px #ffffff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero5_visual_container p {
+      position: relative;
+      font-size: 1.10rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero5_visual_container ul {
+      position: relative;
+      list-style-type: none;
+      font-size: 1.10rem;
+      padding-left: 0;
+      line-height: 1.625;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero5_visual_container ul li {
+      background: url("images/styled-ul-check.svg") no-repeat left center;
+      padding-left: 46px;
+      margin-bottom: 10px;
+    }
+
+    /* Info box */
+    .info-box-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+      bottom: 400px;
+      left: 500px;
+      width: 750px;
+    }
+    .info-box {
+      position: relative;
+      width: calc(50% - 20px);
+      padding: 20px;
+      background: rgba(43, 19, 56, 0.573);
+      border-radius: 10px;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .info-box h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+    .info-box h3 {
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+
+    /* Closer Look Box */
+    .CloserLook-info-box-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+      left: 140px;
+      width: 1500px;
+    }
+    .CloserLook-info-box {
+      position: relative;
+      height: 200px;
+      width: 400px;
+      padding: 20px;
+      background: rgba(43, 19, 56, 0.573);
+      border-radius: 10px;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .CloserLook-info-box h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+    .CloserLook-info-box h3 {
+      font-size: 0.8rem;
+      margin-bottom: 30px;
+      text-align: left;
+      color: #7A7580;
+      text-shadow: 0 0 5px #7A7580;
+    }
+    .CloserLook-info-box button {
+      margin: 0px;
+      text-align: left;
+      text-shadow: 0 0 5px #cc00ff;
+      color: #cc00ff;
+      background-color: #ffffff00;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    /* footer thing */
+    .footer-box-container {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;   
+    }
+    .footer-box {
+      position: relative;
+      width: 1200px;
+      height: 350px;
+      padding: 20px;
+      background: radial-gradient(circle at 70% 70%, #cc00ff8b 0%, rgba(43, 19, 56, 0.573) 80%);
+      border-radius: 30px;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .footer-box h2 {
+      font-weight: bolder;
+      font-size: 2.7rem;
+      margin-bottom: 20px;
+      margin-left: 40px;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+    .footer-box h3 {
+      font-weight: 300;
+      font-size: 1rem;
+      margin-left: 40px;
+      margin-bottom: 80px;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+    .footer-box button {
+      margin-left: 40px;
+      margin-bottom: 10px;
+      width: 180px;
+      height: 50px;
+      color: #ffffff;
+      box-shadow: 0 0 20px #cc00ff;
+      background-color: #cc00ff;
+      padding: 10px 40px;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Background images section */
+    #section2 {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+    .background-images {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .image-slider {
+      display: flex;
+      width: 590%;
+      height: 100%;
+      animation: scrollBackground 50s linear infinite;
+    }
+    .image-slider img {
+      width: 33.33%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.2;
+    }
+  </style>
+</head>
+<body>
+  <!-- Bar -->
+  <div class="transparent-bar">
+    <div class="right-buttons">
+      <a href="https://discord.gg/VHRjrFsv" target="_blank" class="discord-link">Discord</a>
+    </div>
+  </div>
+
+  <main class="wrapper">
+    <section id="section1">
+      <div class="info-box">
+        <h1>Privacy Policy</h1>
+          <p>Privacy Policy Last updated: May 8, 2024</p>
+          <p>Policy Made By: NeonStudios</p>
+        
+          <p>1. Definitions</p>
+          <p>Oculus/Meta ID: A unique and consistent string identifying a specific Oculus/Meta account.</p>
+          <p>IP address and IP: A unique character string your device uses for internet communication.</p>
+          <p>Headset: The device on which you are running the game.</p>
+          <p>I, we, us, our, and NeonStudios: Refers to the developer(s).</p>
+          <p>Services and Game: Games and services developed and published by MintyStudios.</p>
+          <p>Some of our games include: Neon Tag</p>
+        
+          <p>2. Data Collection</p>
+        
+          <p>A. Oculus/Meta ID: Your Oculus/Meta ID is collected by PlayFab for logging into your PlayFab/NeonStudiosGame account.</p>
+          <p>B. IP Address: Your IP address is stored on your PlayFab/NeonStudios account.</p>
+          <p>C. Removal of PlayFab/NeonStudios Account: If you are dissatisfied with the collected data and wish to have your account and associated data deleted, please contact us as described in Section 6 below.</p>
+        
+          <p>3. Use of Data</p>
+          <p>We use your information for various business purposes, including providing our services, and for administrative and moderation purposes, as described below.</p>
+        
+          <p>A: IP Address: As mentioned in Section 2A, your IP address is stored on your PlayFab/NeonStudios account and is only used for IP bans and other moderation purposes.</p>
+          <p>B: Third-Party Services: We do not have control over our third-party services. If you want to learn more, please review the privacy policies of our third-party services listed below:</p>
+
+          <p>PlayFab: Privacy Policy</p>
+          <p>Photon: Privacy Policy</p>
+          <p>This section will be updated as we add more services to our game(s).</p>
+
+          <p>4. Children’s Information</p>
+          
+          <p>Our services are not intended for children under 13 (or other age as required by local law), and we do not knowingly collect personal information from children. If you are a parent or guardian and wish to review, modify, or delete information collected from your child, please contact us as described in Section 6 below. If we become aware that a child has provided us with personal information in violation of applicable law, we will delete the collected information and take appropriate actions</p>
+          
+          <p>5. Other Provisions</p>
+          
+          <p>Third-Party Websites/Applications: Our services may contain links to other websites/applications, and other websites/applications may reference or link to our services. These third-party services are not under our control, and we encourage our users to review the privacy policies of each website and application they interact with. We do not endorse, screen, or approve these services, and we are not responsible for their privacy practices or content. Providing personal information to third-party websites or applications is at your own risk.</p>
+          <p>Supervisory Authority: If you are located in the European Economic Area, Switzerland, the United Kingdom, or Brazil, you have the right to lodge a complaint with a supervisory authority if you believe our processing of your personal information violates applicable law.</p>
+          <p>Changes to our Privacy Policy: We may revise this Privacy Policy at our discretion. If there are significant changes, we will notify you as required by applicable law. By continuing to use our services after the new Privacy Policy takes effect, you accept the updated policy.</p>
+        
+          <p>Removal</p>
+          <p>If you have any questions about our privacy practices or this Privacy Policy or wish to exercise your rights detailed in this Privacy Policy, please contact us at coleidom1@gmail.com or at our discord: https://discord.gg/VHRjrFsv</p>
+      </div>
+  </main>
+
+  <!-- Background -->
+  <div class="backcircles">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body></html>
